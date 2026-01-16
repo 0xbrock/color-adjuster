@@ -20,7 +20,7 @@ A simple web tool to lighten or darken colors using HSL color space adjustments 
 
 ## Live Demo
 
-Visit: `https://<username>.github.io/color-adjuster`
+Visit: `https://0xbrock.github.io/color-adjuster`
 
 ## GitHub Pages Setup
 
@@ -30,7 +30,7 @@ Visit: `https://<username>.github.io/color-adjuster`
 4. Select the **main** branch and **/ (root)** folder
 5. Click **Save**
 
-Your site will be available at `https://<username>.github.io/color-adjuster` within a few minutes.
+Your site will be available at `https://0xbrock.github.io/color-adjuster` within a few minutes.
 
 ## Local Development
 
