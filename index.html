@@ -3,7 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Lighten/Darken Tool</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Color Lighten/Darken Tool - Adjust Colors Online | Free Color Adjuster</title>
+  <meta name="title" content="Color Lighten/Darken Tool - Adjust Colors Online | Free Color Adjuster">
+  <meta name="description" content="Free online tool to lighten or darken any color. Supports hex (#rrggbb) and rgba formats. Works like SCSS lighten() and darken() functions. Copy results instantly.">
+  <meta name="keywords" content="color lighten, color darken, hex color adjuster, rgba color tool, SCSS lighten darken, color shade generator, tint color online, CSS color tool">
+  <meta name="author" content="Color Adjuster">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/color-adjuster">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Color Lighten/Darken Tool - Free Online Color Adjuster">
+  <meta property="og:description" content="Lighten or darken any color online. Supports hex and rgba formats. Works like SCSS color functions. Copy hex or rgba with one click.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/3498db/ffffff?text=Color+Adjuster">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Color Lighten/Darken Tool - Free Online Color Adjuster">
+  <meta property="twitter:description" content="Lighten or darken any color online. Supports hex and rgba formats. Works like SCSS color functions.">
+
+  <!-- Structured Data for Rich Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Color Lighten/Darken Tool",
+    "description": "Free online tool to lighten or darken colors using HSL adjustments. Supports hex and rgba formats.",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Lighten colors by percentage",
+      "Darken colors by percentage",
+      "Hex color input and output",
+      "RGBA color input and output",
+      "Visual color picker",
+      "One-click copy to clipboard"
+    ]
+  }
+  </script>
+
+  <!-- Theme Color for Mobile Browsers -->
+  <meta name="theme-color" content="#1a1a2e">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS PWA Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Color Adjust">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
+
   <style>
     * { box-sizing: border-box; }
     body {
@@ -320,6 +377,13 @@
 
     // Initialize
     adjustColor('lighten');
+
+    // Register Service Worker for offline support
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch((err) => console.log('SW registration failed:', err));
+    }
   </script>
 </body>
 </html>
