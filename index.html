@@ -14,32 +14,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>Color Lighten/Darken Tool - Adjust Colors Online | Free Color Adjuster</title>
-  <meta name="title" content="Color Lighten/Darken Tool - Adjust Colors Online | Simple Color Adjuster">
-  <meta name="description" content="Simple online tool to lighten or darken any color. Supports hex (#rrggbb) and rgba formats. Works like SCSS lighten() and darken() functions. Copy results instantly.">
-  <meta name="keywords" content="color lighten, color darken, hex color adjuster, rgba color tool, SCSS lighten darken, color shade generator, tint color online, CSS color tool">
+  <title>Color Tool - Lighten/Darken & Contrast Checker | WCAG Accessibility Tool</title>
+  <meta name="title" content="Color Tool - Lighten/Darken & Contrast Checker | WCAG Accessibility">
+  <meta name="description" content="Online color tool: lighten/darken colors and check WCAG contrast ratios. Test AA/AAA accessibility compliance with live text previews. Supports hex and rgba formats.">
+  <meta name="keywords" content="color contrast checker, WCAG contrast ratio, color accessibility, color lighten, color darken, hex color adjuster, AA AAA compliance, accessibility tool, color shade generator">
   <meta name="author" content="Color Adjuster">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://github.com/color-adjuster">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Color Lighten/Darken Tool - Free Online Color Adjuster">
-  <meta property="og:description" content="Lighten or darken any color online. Supports hex and rgba formats. Works like SCSS color functions. Copy hex or rgba with one click.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630/3498db/ffffff?text=Color+Adjuster">
+  <meta property="og:title" content="Color Tool - Lighten/Darken & WCAG Contrast Checker">
+  <meta property="og:description" content="Color tool: adjust lightness/darkness and check WCAG contrast ratios. Test AA/AAA accessibility compliance with live text previews.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/3498db/ffffff?text=Color+Tool">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Color Lighten/Darken Tool - Free Online Color Adjuster">
-  <meta property="twitter:description" content="Lighten or darken any color online. Supports hex and rgba formats. Works like SCSS color functions.">
+  <meta property="twitter:title" content="Color Tool - Lighten/Darken & WCAG Contrast Checker">
+  <meta property="twitter:description" content="Color tool: adjust colors and check WCAG contrast ratios. Test AA/AAA accessibility with live previews.">
 
   <!-- Structured Data for Rich Results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Color Lighten/Darken Tool",
-    "description": "Free online tool to lighten or darken colors using HSL adjustments. Supports hex and rgba formats.",
+    "name": "Color Tool - Lighten/Darken & Contrast Checker",
+    "description": "Online tool to lighten/darken colors and check WCAG contrast ratios for accessibility compliance.",
     "applicationCategory": "DesignApplication",
     "operatingSystem": "Any",
     "offers": {
@@ -50,6 +50,9 @@
     "featureList": [
       "Lighten colors by percentage",
       "Darken colors by percentage",
+      "WCAG contrast ratio checker",
+      "AA and AAA compliance testing",
+      "Live text accessibility preview",
       "Hex color input and output",
       "RGBA color input and output",
       "Visual color picker",
@@ -189,6 +192,179 @@
       border-radius: 4px;
       color: #aaa;
     }
+
+    /* Contrast Checker Styles */
+    .section-divider {
+      margin: 3rem 0;
+      border: none;
+      border-top: 1px solid #333;
+    }
+    .contrast-checker {
+      margin-top: 2rem;
+    }
+    .contrast-checker h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .color-inputs-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .color-input-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .color-swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1px solid #444;
+    }
+    .contrast-preview {
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .preview-large {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .preview-normal {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .preview-small {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    .contrast-ratio-display {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .ratio-value {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .ratio-label {
+      font-size: 0.875rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .wcag-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .wcag-card {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .wcag-card h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin: 0 0 0.75rem 0;
+    }
+    .wcag-level {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #0f0f23;
+    }
+    .wcag-level:last-child {
+      border-bottom: none;
+    }
+    .wcag-level-name {
+      font-weight: 500;
+    }
+    .wcag-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-pass {
+      background: #065f46;
+      color: #34d399;
+    }
+    .badge-fail {
+      background: #7f1d1d;
+      color: #fca5a5;
+    }
+    .swap-btn {
+      background: #0f4c75;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 auto 1.5rem;
+      transition: background 0.2s;
+    }
+    .swap-btn:hover {
+      background: #1a6ca8;
+    }
+    .example-texts {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .example-texts h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin: 0 0 1rem 0;
+    }
+    .example-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .example-row:last-child {
+      margin-bottom: 0;
+    }
+    .example-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .example-size {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 480px) {
+      .color-inputs-row {
+        grid-template-columns: 1fr;
+      }
+      .wcag-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -233,6 +409,118 @@
     <strong>Supported formats:</strong><br>
     <code>#rgb</code> <code>#rrggbb</code> <code>rgb(r, g, b)</code> <code>rgba(r, g, b, a)</code>
   </div>
+
+  <hr class="section-divider">
+
+  <!-- Contrast Checker Section -->
+  <section class="contrast-checker">
+    <h2>Contrast Checker</h2>
+
+    <div class="color-inputs-row">
+      <div class="color-input-group">
+        <label>
+          <span class="color-swatch" id="fgSwatch"></span>
+          Text Color
+        </label>
+        <div class="color-input-wrapper">
+          <input type="text" id="fgColorInput" placeholder="#000000" value="#1a1a2e">
+          <input type="color" id="fgColorPicker" value="#1a1a2e">
+        </div>
+      </div>
+      <div class="color-input-group">
+        <label>
+          <span class="color-swatch" id="bgSwatch"></span>
+          Background Color
+        </label>
+        <div class="color-input-wrapper">
+          <input type="text" id="bgColorInput" placeholder="#ffffff" value="#f0f0f0">
+          <input type="color" id="bgColorPicker" value="#f0f0f0">
+        </div>
+      </div>
+    </div>
+
+    <button class="swap-btn" onclick="swapContrastColors()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"/>
+      </svg>
+      Swap Colors
+    </button>
+
+    <div class="contrast-preview" id="contrastPreview">
+      <div class="preview-large">Large Text (24px Bold)</div>
+      <div class="preview-normal">Normal body text at 16px demonstrates typical reading conditions for most web content.</div>
+      <div class="preview-small">Small text at 14px is common for captions and secondary information.</div>
+    </div>
+
+    <div class="contrast-ratio-display">
+      <div class="ratio-value" id="contrastRatio">4.5:1</div>
+      <div class="ratio-label">Contrast Ratio</div>
+    </div>
+
+    <div class="wcag-grid">
+      <div class="wcag-card">
+        <h4>Normal Text</h4>
+        <div class="wcag-level">
+          <span class="wcag-level-name">AA (4.5:1)</span>
+          <span class="wcag-badge" id="normalAA">Pass</span>
+        </div>
+        <div class="wcag-level">
+          <span class="wcag-level-name">AAA (7:1)</span>
+          <span class="wcag-badge" id="normalAAA">Fail</span>
+        </div>
+      </div>
+      <div class="wcag-card">
+        <h4>Large Text</h4>
+        <div class="wcag-level">
+          <span class="wcag-level-name">AA (3:1)</span>
+          <span class="wcag-badge" id="largeAA">Pass</span>
+        </div>
+        <div class="wcag-level">
+          <span class="wcag-level-name">AAA (4.5:1)</span>
+          <span class="wcag-badge" id="largeAAA">Pass</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-texts">
+      <h4>Text Examples</h4>
+      <div class="example-row" id="example24">
+        <span style="font-size: 24px; font-weight: 700;">Heading Text</span>
+        <div class="example-info">
+          <span class="wcag-badge" id="badge24">Pass</span>
+          <span class="example-size">24px Bold (Large)</span>
+        </div>
+      </div>
+      <div class="example-row" id="example18">
+        <span style="font-size: 18px; font-weight: 700;">Subheading</span>
+        <div class="example-info">
+          <span class="wcag-badge" id="badge18">Pass</span>
+          <span class="example-size">18px Bold (Large)</span>
+        </div>
+      </div>
+      <div class="example-row" id="example16">
+        <span style="font-size: 16px;">Body text sample</span>
+        <div class="example-info">
+          <span class="wcag-badge" id="badge16">Pass</span>
+          <span class="example-size">16px Normal</span>
+        </div>
+      </div>
+      <div class="example-row" id="example14">
+        <span style="font-size: 14px;">Small caption text</span>
+        <div class="example-info">
+          <span class="wcag-badge" id="badge14">Pass</span>
+          <span class="example-size">14px Normal</span>
+        </div>
+      </div>
+      <div class="example-row" id="example12">
+        <span style="font-size: 12px;">Fine print text</span>
+        <div class="example-info">
+          <span class="wcag-badge" id="badge12">Pass</span>
+          <span class="example-size">12px Normal</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script>
     function parseColor(input) {
@@ -386,6 +674,142 @@
 
     // Initialize
     adjustColor('lighten');
+
+    // ==========================================
+    // Contrast Checker Functions
+    // ==========================================
+
+    // Calculate relative luminance per WCAG 2.1
+    function getLuminance(r, g, b) {
+      const [rs, gs, bs] = [r, g, b].map(c => {
+        c = c / 255;
+        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      });
+      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    }
+
+    // Calculate contrast ratio between two colors
+    function getContrastRatio(color1, color2) {
+      const l1 = getLuminance(color1.r, color1.g, color1.b);
+      const l2 = getLuminance(color2.r, color2.g, color2.b);
+      const lighter = Math.max(l1, l2);
+      const darker = Math.min(l1, l2);
+      return (lighter + 0.05) / (darker + 0.05);
+    }
+
+    // Check WCAG compliance levels
+    function checkWCAG(ratio) {
+      return {
+        normalAA: ratio >= 4.5,
+        normalAAA: ratio >= 7,
+        largeAA: ratio >= 3,
+        largeAAA: ratio >= 4.5
+      };
+    }
+
+    // Update badge appearance
+    function updateBadge(element, passes) {
+      element.textContent = passes ? 'Pass' : 'Fail';
+      element.className = 'wcag-badge ' + (passes ? 'badge-pass' : 'badge-fail');
+    }
+
+    // Update the entire contrast checker UI
+    function updateContrastChecker() {
+      const fgInput = document.getElementById('fgColorInput').value;
+      const bgInput = document.getElementById('bgColorInput').value;
+
+      const fgColor = parseColor(fgInput);
+      const bgColor = parseColor(bgInput);
+
+      if (!fgColor || !bgColor) return;
+
+      // Update swatches
+      document.getElementById('fgSwatch').style.background = toRgba(fgColor);
+      document.getElementById('bgSwatch').style.background = toRgba(bgColor);
+
+      // Calculate contrast ratio
+      const ratio = getContrastRatio(fgColor, bgColor);
+      const wcag = checkWCAG(ratio);
+
+      // Update ratio display
+      document.getElementById('contrastRatio').textContent = ratio.toFixed(2) + ':1';
+
+      // Update WCAG badges
+      updateBadge(document.getElementById('normalAA'), wcag.normalAA);
+      updateBadge(document.getElementById('normalAAA'), wcag.normalAAA);
+      updateBadge(document.getElementById('largeAA'), wcag.largeAA);
+      updateBadge(document.getElementById('largeAAA'), wcag.largeAAA);
+
+      // Update preview
+      const preview = document.getElementById('contrastPreview');
+      preview.style.backgroundColor = toRgba(bgColor);
+      preview.style.color = toRgba(fgColor);
+
+      // Update example text rows
+      const exampleRows = ['example24', 'example18', 'example16', 'example14', 'example12'];
+      exampleRows.forEach(id => {
+        const row = document.getElementById(id);
+        row.style.backgroundColor = toRgba(bgColor);
+        row.style.color = toRgba(fgColor);
+      });
+
+      // Update example badges based on text size
+      // Large text: 24px bold, 18px bold - use largeAA threshold
+      updateBadge(document.getElementById('badge24'), wcag.largeAA);
+      updateBadge(document.getElementById('badge18'), wcag.largeAA);
+      // Normal text: 16px, 14px, 12px - use normalAA threshold
+      updateBadge(document.getElementById('badge16'), wcag.normalAA);
+      updateBadge(document.getElementById('badge14'), wcag.normalAA);
+      updateBadge(document.getElementById('badge12'), wcag.normalAA);
+    }
+
+    // Swap foreground and background colors
+    function swapContrastColors() {
+      const fgInput = document.getElementById('fgColorInput');
+      const bgInput = document.getElementById('bgColorInput');
+      const fgPicker = document.getElementById('fgColorPicker');
+      const bgPicker = document.getElementById('bgColorPicker');
+
+      const tempText = fgInput.value;
+      const tempPicker = fgPicker.value;
+
+      fgInput.value = bgInput.value;
+      fgPicker.value = bgPicker.value;
+      bgInput.value = tempText;
+      bgPicker.value = tempPicker;
+
+      updateContrastChecker();
+    }
+
+    // Sync contrast checker color pickers with text inputs
+    document.getElementById('fgColorPicker').addEventListener('input', (e) => {
+      document.getElementById('fgColorInput').value = e.target.value;
+      updateContrastChecker();
+    });
+
+    document.getElementById('bgColorPicker').addEventListener('input', (e) => {
+      document.getElementById('bgColorInput').value = e.target.value;
+      updateContrastChecker();
+    });
+
+    document.getElementById('fgColorInput').addEventListener('input', (e) => {
+      const color = parseColor(e.target.value);
+      if (color) {
+        document.getElementById('fgColorPicker').value = toHex(color);
+        updateContrastChecker();
+      }
+    });
+
+    document.getElementById('bgColorInput').addEventListener('input', (e) => {
+      const color = parseColor(e.target.value);
+      if (color) {
+        document.getElementById('bgColorPicker').value = toHex(color);
+        updateContrastChecker();
+      }
+    });
+
+    // Initialize contrast checker
+    updateContrastChecker();
 
     // Register Service Worker for offline support
     if ('serviceWorker' in navigator) {
